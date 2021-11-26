@@ -13,4 +13,8 @@ describe('Greeter tests', () => {
     Date.prototype.getHours = jest.fn().mockReturnValue(20);
     expect(greeting()).toBe('Good evening!');
   });
+  it('should greet the night when it is the night', () => {
+    Date.prototype.getHours = jest.fn().mockReturnValue(23);
+    expect(greeting()).toBe('Good night!');
+  });
 });
